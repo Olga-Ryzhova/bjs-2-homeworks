@@ -2,9 +2,7 @@ function getArrayParams(...arr) {
 	let min = Math.min(...arr);
 	let max = Math.max(...arr);
 
-	result = (arr.reduce((currentSum, currentNumber) => {
-		return currentSum + currentNumber
-	}, 0) / arr.length);
+	result = (arr.reduce((currentSum, currentNumber) => currentSum + currentNumber, 0) / arr.length);
 	avg = +(result.toFixed(2));
 
 	return {
@@ -21,9 +19,7 @@ function summElementsWorker(...arr) {
 		return 0;
 	}
 
-	return arr.reduce((currentSum, currentNumber) => {
-		return currentSum + currentNumber
-	}, 0);
+	return arr.reduce((currentSum, currentNumber) => currentSum + currentNumber, 0);
 }
 
 summElementsWorker(10, 10, 11, 20, 10);
